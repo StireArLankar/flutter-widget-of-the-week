@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_of_the_week/1_safe_area/safe_area.dart';
+import 'package:flutter_widget_of_the_week/2_expanded/expanded.dart';
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
-      routes: {SafeAreaScreen.routeName: (ctx) => SafeAreaScreen()},
+      routes: {
+        SafeAreaScreen.routeName: (ctx) => SafeAreaScreen(),
+        ExpandedScreen.routeName: (ctx) => ExpandedScreen(),
+      },
     );
   }
 }
@@ -31,11 +35,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              'asd',
-              style: Theme.of(context).textTheme.display1,
+              'Check the drawer!',
             ),
           ],
         ),
