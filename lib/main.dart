@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_of_the_week/1_safe_area/safe_area.dart';
 import 'package:flutter_widget_of_the_week/2_expanded/expanded.dart';
+import 'package:flutter_widget_of_the_week/3_wrap/wrap.dart';
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
 void main() => runApp(MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SafeAreaScreen.routeName: (ctx) => SafeAreaScreen(),
         ExpandedScreen.routeName: (ctx) => ExpandedScreen(),
+        WrapScreen.routeName: (ctx) => WrapScreen(),
       },
     );
   }

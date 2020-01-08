@@ -1,18 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_of_the_week/1_safe_area/safe_area.dart';
 import 'package:flutter_widget_of_the_week/2_expanded/expanded.dart';
+import 'package:flutter_widget_of_the_week/3_wrap/wrap.dart';
 
 class AppDrawer extends StatelessWidget {
+  List<Widget> buildLink(BuildContext context, String title, String route) {
+    return [
+      ListTile(
+        leading: const Icon(Icons.panorama_fish_eye),
+        title: Text(title),
+        onTap: () {
+          Navigator.of(context).pushReplacementNamed(route);
+        },
+      ),
+      Divider(),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: SafeArea(
         child: Column(
           children: <Widget>[
-            // AppBar(
-            //   title: Text('Menu!'),
-            //   automaticallyImplyLeading: false,
-            // ),
             SizedBox(height: 5),
             Text(
               'Menu!',
@@ -23,24 +33,10 @@ class AppDrawer extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    ListTile(
-                      leading: Icon(Icons.panorama_fish_eye),
-                      title: Text('Safe Area'),
-                      onTap: () {
-                        Navigator.of(context)
-                            .pushReplacementNamed(SafeAreaScreen.routeName);
-                      },
-                    ),
-                    Divider(),
-                    ListTile(
-                      leading: Icon(Icons.panorama_fish_eye),
-                      title: Text('Expanded'),
-                      onTap: () {
-                        Navigator.of(context)
-                            .pushReplacementNamed(ExpandedScreen.routeName);
-                      },
-                    ),
-                    Divider(),
+                    ...buildLink(
+                        context, 'Safe Area', SafeAreaScreen.routeName),
+                    ...buildLink(context, 'Expanded', ExpandedScreen.routeName),
+                    ...buildLink(context, 'Wrap', WrapScreen.routeName),
                   ],
                 ),
               ),
