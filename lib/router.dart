@@ -4,6 +4,7 @@ import 'package:flutter_widget_of_the_week/1_safe_area/safe_area.dart';
 import 'package:flutter_widget_of_the_week/2_expanded/expanded.dart';
 import 'package:flutter_widget_of_the_week/3_wrap/wrap.dart';
 import 'package:flutter_widget_of_the_week/4_animated_container/animated_container.dart';
+import 'package:flutter_widget_of_the_week/5_opacity/opacity.dart';
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
@@ -16,6 +17,8 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => WrapScreen());
     case AnimatedContainerScreen.routeName:
       return MaterialPageRoute(builder: (_) => AnimatedContainerScreen());
+    case OpacityScreen.routeName:
+      return MaterialPageRoute(builder: (_) => OpacityScreen());
     default:
       return MaterialPageRoute(builder: (_) => DefaultScreen(settings.name));
   }

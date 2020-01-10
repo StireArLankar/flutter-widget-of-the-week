@@ -3,6 +3,7 @@ import 'package:flutter_widget_of_the_week/1_safe_area/safe_area.dart';
 import 'package:flutter_widget_of_the_week/2_expanded/expanded.dart';
 import 'package:flutter_widget_of_the_week/3_wrap/wrap.dart';
 import 'package:flutter_widget_of_the_week/4_animated_container/animated_container.dart';
+import 'package:flutter_widget_of_the_week/5_opacity/opacity.dart';
 
 class AppDrawer extends StatelessWidget {
   List<Widget> buildLink(BuildContext context, String title, String route) {
@@ -40,6 +41,7 @@ class AppDrawer extends StatelessWidget {
                     ...buildLink(context, 'Wrap', WrapScreen.routeName),
                     ...buildLink(context, 'Animated Container',
                         AnimatedContainerScreen.routeName),
+                    ...buildLink(context, 'Opacity', OpacityScreen.routeName),
                   ],
                 ),
               ),
