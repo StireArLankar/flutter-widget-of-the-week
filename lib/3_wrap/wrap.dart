@@ -5,7 +5,7 @@ import './first_tab.dart';
 import './second_tab.dart';
 
 class WrapScreen extends StatelessWidget {
-  static String routeName = 'wrap';
+  static const String routeName = 'wrap';
 
   @override
   Widget build(BuildContext context) {

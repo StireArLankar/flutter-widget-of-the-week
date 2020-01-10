@@ -4,7 +4,7 @@ import 'package:flutter_widget_of_the_week/tabs.dart';
 // CHECK DRAWER WITHOUT SAFEAREA AND WITH IT
 
 class SafeAreaScreen extends StatelessWidget {
-  static String routeName = 'safe-area';
+  static const String routeName = 'safe-area';
 
   @override
   Widget build(BuildContext context) {

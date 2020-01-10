@@ -5,7 +5,7 @@ import './first_tab.dart';
 import './second_tab.dart';
 
 class ExpandedScreen extends StatelessWidget {
-  static String routeName = 'expanded';
+  static const String routeName = 'expanded';
 
   @override
   Widget build(BuildContext context) {
