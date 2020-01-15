@@ -9,6 +9,7 @@ import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
+import '8_fab/fab.dart';
 
 class RouteItem {
   final Widget Function(BuildContext) screenBuilder;
@@ -57,6 +58,11 @@ final routes = [
     (ctx) => FadeTransitionScreen(),
     FadeTransitionScreen.routeName,
     FadeTransitionScreen.title,
+  ),
+  RouteItem(
+    (ctx) => FABScreen(),
+    FABScreen.routeName,
+    FABScreen.title,
   ),
 ];
 

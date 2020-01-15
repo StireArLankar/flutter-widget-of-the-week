@@ -16,7 +16,7 @@ class _FirstTabState extends State<FirstTab>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 3),
     );
 
     _animation = Tween(
@@ -27,8 +27,8 @@ class _FirstTabState extends State<FirstTab>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   void onTap() {

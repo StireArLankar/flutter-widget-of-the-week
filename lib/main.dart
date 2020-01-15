@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Widgets of the Week!',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        accentColor: Colors.red,
       ),
       onGenerateRoute: generateRoutes,
       home: MyHomePage(),
