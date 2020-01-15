@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_widget_of_the_week/1_safe_area/safe_area.dart';
-import 'package:flutter_widget_of_the_week/2_expanded/expanded.dart';
-import 'package:flutter_widget_of_the_week/3_wrap/wrap.dart';
-import 'package:flutter_widget_of_the_week/4_animated_container/animated_container.dart';
-import 'package:flutter_widget_of_the_week/5_opacity/opacity.dart';
-import 'package:flutter_widget_of_the_week/6_future_builder/future_builder.dart';
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
+
+import '1_safe_area/safe_area.dart';
+import '2_expanded/expanded.dart';
+import '3_wrap/wrap.dart';
+import '4_animated_container/animated_container.dart';
+import '5_opacity/opacity.dart';
+import '6_future_builder/future_builder.dart';
+import '7_fade_transition/fade_transition.dart';
 
 class RouteItem {
   final Widget Function(BuildContext) screenBuilder;
@@ -18,10 +20,6 @@ class RouteItem {
     this.routeName,
     this.title,
   );
-}
-
-Widget fun(BuildContext ctx) {
-  return SafeAreaScreen();
 }
 
 final routes = [
@@ -54,6 +52,11 @@ final routes = [
     (ctx) => FutureBuilderScreen(),
     FutureBuilderScreen.routeName,
     'Future Builder',
+  ),
+  RouteItem(
+    (ctx) => FadeTransitionScreen(),
+    FadeTransitionScreen.routeName,
+    FadeTransitionScreen.title,
   ),
 ];
 
