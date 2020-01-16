@@ -10,6 +10,7 @@ import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
+import '9_page_view/page_view.dart';
 
 class RouteItem {
   final Widget Function(BuildContext) screenBuilder;
@@ -63,6 +64,11 @@ final routes = [
     (ctx) => FABScreen(),
     FABScreen.routeName,
     FABScreen.title,
+  ),
+  RouteItem(
+    (ctx) => PageViewScreen(),
+    PageViewScreen.routeName,
+    PageViewScreen.title,
   ),
 ];
 
