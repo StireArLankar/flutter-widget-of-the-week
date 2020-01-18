@@ -11,6 +11,7 @@ import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
 import '9_page_view/page_view.dart';
+import '10_table/table.dart';
 
 class RouteItem {
   final Widget Function(BuildContext) screenBuilder;
@@ -69,6 +70,11 @@ final routes = [
     (ctx) => PageViewScreen(),
     PageViewScreen.routeName,
     PageViewScreen.title,
+  ),
+  RouteItem(
+    (ctx) => TableScreen(),
+    TableScreen.routeName,
+    TableScreen.title,
   ),
 ];
 
