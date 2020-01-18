@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_widget_of_the_week/3_wrap/wrap.dart';
 
 class FirstTab extends StatelessWidget {
   @override

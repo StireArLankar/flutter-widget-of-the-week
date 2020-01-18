@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
+import '11_sliver_app_bar/sliver_app_bar.dart';
 import '1_safe_area/safe_area.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
@@ -75,6 +76,11 @@ final routes = [
     (ctx) => TableScreen(),
     TableScreen.routeName,
     TableScreen.title,
+  ),
+  RouteItem(
+    (ctx) => SliverAppBarScreen(),
+    SliverAppBarScreen.routeName,
+    SliverAppBarScreen.title,
   ),
 ];
 
