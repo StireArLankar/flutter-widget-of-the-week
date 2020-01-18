@@ -40,6 +40,7 @@ class _TabsScreenState extends State<TabsScreen> {
       drawer: AppDrawer(),
       body: widget.pages[_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         onTap: selectPage,
         backgroundColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.white,
