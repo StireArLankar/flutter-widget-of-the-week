@@ -2,6 +2,13 @@
 
 ## Content:
 
-1. SafeArea
+1. Safe Area
 2. Expanded
 3. Wrap
+4. Animated Container
+5. Opacity
+6. Future Builder
+7. Fade Transition
+8. Floating Action Button
+9. Page View
+10. Table
