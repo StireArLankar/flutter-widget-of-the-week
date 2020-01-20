@@ -6,6 +6,7 @@ import '11_sliver_app_bar/sliver_app_bar.dart';
 import '12_sliver_list/sliver_list.dart';
 import '13_fade_in_image/fade_in_image.dart';
 import '14_stream_builder/stream_builder.dart';
+import '16_clip_r_rect/clip_r_rect.dart';
 import '1_safe_area/safe_area.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
@@ -99,6 +100,11 @@ final routes = [
     (ctx) => StreamBuilderScreen(),
     StreamBuilderScreen.routeName,
     StreamBuilderScreen.title,
+  ),
+  RouteItem(
+    (ctx) => ClipRRectScreen(),
+    ClipRRectScreen.routeName,
+    ClipRRectScreen.title,
   ),
 ];
 
