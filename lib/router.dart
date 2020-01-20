@@ -4,6 +4,7 @@ import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
 import '11_sliver_app_bar/sliver_app_bar.dart';
 import '12_sliver_list/sliver_list.dart';
+import '13_fade_in_image/fade_in_image.dart';
 import '1_safe_area/safe_area.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
@@ -87,6 +88,11 @@ final routes = [
     (ctx) => SliverListScreen(),
     SliverListScreen.routeName,
     SliverListScreen.title,
+  ),
+  RouteItem(
+    (ctx) => FadeInImageScreen(),
+    FadeInImageScreen.routeName,
+    FadeInImageScreen.title,
   ),
 ];
 
