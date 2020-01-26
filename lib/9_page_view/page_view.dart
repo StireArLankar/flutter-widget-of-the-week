@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../tabs.dart';
 import 'first_tab.dart';
+import 'neptunia/neptunia_tab.dart';
 import 'second_tab.dart';
 
 class PageViewScreen extends StatelessWidget {
@@ -11,8 +12,8 @@ class PageViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabsScreen(
-      [FirstTab(), SecondTab()],
-      ['first', 'second'],
+      [FirstTab(), SecondTab(), NeptuniaTab()],
+      ['first', 'second', 'nepu'],
       PageViewScreen.title,
     );
   }
