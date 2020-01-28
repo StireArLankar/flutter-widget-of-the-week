@@ -8,6 +8,7 @@ import '13_fade_in_image/fade_in_image.dart';
 import '14_stream_builder/stream_builder.dart';
 import '16_clip_r_rect/clip_r_rect.dart';
 import '17_hero/hero.dart';
+import '18_custom_paint/custom_paint.dart';
 import '1_safe_area/safe_area.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
@@ -111,6 +112,11 @@ final routes = [
     (ctx) => HeroScreen(),
     HeroScreen.routeName,
     HeroScreen.title,
+  ),
+  RouteItem(
+    (ctx) => CustomPaintScreen(),
+    CustomPaintScreen.routeName,
+    CustomPaintScreen.title,
   ),
 ];
 
