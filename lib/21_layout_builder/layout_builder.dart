@@ -41,26 +41,4 @@ class LayoutBuilderScreen extends StatelessWidget {
       ),
     );
   }
-
-  Widget buildNepu(String text) {
-    return Stack(
-      children: <Widget>[
-        Image.asset('assets/images/placeholder.jpg', height: 300),
-        Positioned.fill(
-          child: Align(
-            alignment: Alignment.center,
-            child: Container(
-              padding: const EdgeInsets.all(6),
-              color: Colors.black45,
-              child: Text(
-                text,
-                style: TextStyle(fontSize: 30, color: Colors.white),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
 }
