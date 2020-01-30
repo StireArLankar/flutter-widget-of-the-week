@@ -12,6 +12,7 @@ import '18_custom_paint/custom_paint.dart';
 import '19_tooltip/tooltip.dart';
 import '1_safe_area/safe_area.dart';
 import '20_fitter_box/fitted_box.dart';
+import '21_layout_builder/layout_builder.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
@@ -129,6 +130,11 @@ final routes = [
     (ctx) => FittedBoxScreen(),
     FittedBoxScreen.routeName,
     FittedBoxScreen.title,
+  ),
+  RouteItem(
+    (ctx) => LayoutBuilderScreen(),
+    LayoutBuilderScreen.routeName,
+    LayoutBuilderScreen.title,
   ),
 ];
 

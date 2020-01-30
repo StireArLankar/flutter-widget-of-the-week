@@ -19,6 +19,11 @@ class FittedBoxScreen extends StatelessWidget {
           children: <Widget>[
             buildContainer(
               FittedBox(
+                child: buildNepu('default'),
+              ),
+            ),
+            buildContainer(
+              FittedBox(
                 child: buildNepu('fill'),
                 fit: BoxFit.fill,
               ),
@@ -27,6 +32,13 @@ class FittedBoxScreen extends StatelessWidget {
               FittedBox(
                 child: buildNepu('contain'),
                 fit: BoxFit.contain,
+              ),
+            ),
+            buildContainer(
+              FittedBox(
+                child: buildNepu('contain'),
+                fit: BoxFit.contain,
+                alignment: Alignment.centerLeft,
               ),
             ),
             buildContainer(
@@ -84,7 +96,7 @@ class FittedBoxScreen extends StatelessWidget {
   Container buildContainer(Widget widget) {
     return Container(
       width: 300,
-      height: 200,
+      height: 150,
       child: widget,
     );
   }
