@@ -14,6 +14,7 @@ import '1_safe_area/safe_area.dart';
 import '20_fitter_box/fitted_box.dart';
 import '21_layout_builder/layout_builder.dart';
 import '22_absorb_pointer/absorb_pointer.dart';
+import '23_transform/transform.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
@@ -141,6 +142,11 @@ final routes = [
     (ctx) => AbsorbPointerScreen(),
     AbsorbPointerScreen.routeName,
     AbsorbPointerScreen.title,
+  ),
+  RouteItem(
+    (ctx) => TransformScreen(),
+    TransformScreen.routeName,
+    TransformScreen.title,
   ),
 ];
 
