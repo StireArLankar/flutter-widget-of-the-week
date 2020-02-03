@@ -16,6 +16,7 @@ import '21_layout_builder/layout_builder.dart';
 import '22_absorb_pointer/absorb_pointer.dart';
 import '23_transform/transform.dart';
 import '24_backdrop_filter/backdrop_filter.dart';
+import '25_align/align.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
@@ -153,6 +154,11 @@ final routes = [
     (ctx) => BackdropFilterScreen(),
     BackdropFilterScreen.routeName,
     BackdropFilterScreen.title,
+  ),
+  RouteItem(
+    (ctx) => AlignScreen(),
+    AlignScreen.routeName,
+    AlignScreen.title,
   ),
 ];
 
