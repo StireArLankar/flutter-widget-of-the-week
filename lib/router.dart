@@ -20,6 +20,7 @@ import '25_align/align.dart';
 import '26_positioned/positioned.dart';
 import '27_animated_builder/animated_builder.dart';
 import '28_dismissible/dismissible.dart';
+import '29_sized_box/sized_box.dart';
 import '2_expanded/expanded.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
@@ -177,6 +178,11 @@ final routes = [
     (ctx) => DismissibleScreen(),
     DismissibleScreen.routeName,
     DismissibleScreen.title,
+  ),
+  RouteItem(
+    (ctx) => SizedBoxScreen(),
+    SizedBoxScreen.routeName,
+    SizedBoxScreen.title,
   ),
 ];
 
