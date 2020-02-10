@@ -22,6 +22,7 @@ import '27_animated_builder/animated_builder.dart';
 import '28_dismissible/dismissible.dart';
 import '29_sized_box/sized_box.dart';
 import '2_expanded/expanded.dart';
+import '31_draggable/draggable.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
@@ -183,6 +184,11 @@ final routes = [
     (ctx) => SizedBoxScreen(),
     SizedBoxScreen.routeName,
     SizedBoxScreen.title,
+  ),
+  RouteItem(
+    (ctx) => DraggableScreen(),
+    DraggableScreen.routeName,
+    DraggableScreen.title,
   ),
 ];
 
