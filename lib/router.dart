@@ -24,6 +24,7 @@ import '29_sized_box/sized_box.dart';
 import '2_expanded/expanded.dart';
 import '31_draggable/draggable.dart';
 import '32_animated_list/animated_list.dart';
+import '33_flexible/flexible.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
@@ -195,6 +196,11 @@ final routes = [
     (ctx) => AnimatedListScreen(),
     AnimatedListScreen.routeName,
     AnimatedListScreen.title,
+  ),
+  RouteItem(
+    (ctx) => FlexibleScreen(),
+    FlexibleScreen.routeName,
+    FlexibleScreen.title,
   ),
 ];
 
