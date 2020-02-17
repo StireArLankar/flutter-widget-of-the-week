@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
+import '../router.dart';
+
+final animatedListRoute = RouteItem(
+  (ctx) => AnimatedListScreen(),
+  AnimatedListScreen.routeName,
+  AnimatedListScreen.title,
+);
+
 class AnimatedListScreen extends StatefulWidget {
   static const String routeName = 'AnimatedList';
   static const String title = 'AnimatedList';

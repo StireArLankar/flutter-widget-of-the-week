@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/tabs.dart';
 
-import './first_tab.dart';
-import './second_tab.dart';
+import '../tabs.dart';
+import '../router.dart';
+import 'first_tab.dart';
+import 'second_tab.dart';
+
+final wrapRoute = RouteItem(
+  (ctx) => WrapScreen(),
+  WrapScreen.routeName,
+  WrapScreen.title,
+);
 
 class WrapScreen extends StatelessWidget {
   static const String routeName = 'wrap';
+  static const String title = 'Wrap';
 
   @override
   Widget build(BuildContext context) {
     return TabsScreen(
       [FirstTab(), SecondTab()],
       ['Horizontal', 'Vertical'],
-      'Wrap',
+      WrapScreen.title,
     );
   }
 }

@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/app_drawer.dart';
+import '../app_drawer.dart';
+import '../router.dart';
+
+final fittedBoxRoute = RouteItem(
+  (ctx) => FittedBoxScreen(),
+  FittedBoxScreen.routeName,
+  FittedBoxScreen.title,
+);
 
 class FittedBoxScreen extends StatelessWidget {
   static const String routeName = 'fitted-box';

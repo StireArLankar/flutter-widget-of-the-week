@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/app_drawer.dart';
+import '../app_drawer.dart';
+import '../router.dart';
+
+final layoutBuilderRoute = RouteItem(
+  (ctx) => LayoutBuilderScreen(),
+  LayoutBuilderScreen.routeName,
+  LayoutBuilderScreen.title,
+);
 
 class LayoutBuilderScreen extends StatelessWidget {
   static const String routeName = 'layout-builder';

@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../tabs.dart';
+import '../router.dart';
 import 'first_tab.dart';
 import 'second_tab.dart';
+
+final animatedBuilderRoute = RouteItem(
+  (ctx) => AnimatedBuilderScreen(),
+  AnimatedBuilderScreen.routeName,
+  AnimatedBuilderScreen.title,
+);
 
 class AnimatedBuilderScreen extends StatelessWidget {
   static const String routeName = 'animated-builder';

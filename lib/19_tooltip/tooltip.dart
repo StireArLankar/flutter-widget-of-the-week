@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/app_drawer.dart';
+import '../app_drawer.dart';
+import '../router.dart';
+
+final tooltipRoute = RouteItem(
+  (ctx) => TooltipScreen(),
+  TooltipScreen.routeName,
+  TooltipScreen.title,
+);
 
 class TooltipScreen extends StatelessWidget {
   static const String routeName = 'tooltip';

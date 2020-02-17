@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../app_drawer.dart';
+import '../router.dart';
 import 'first_tab.dart';
 import 'second_tab.dart';
+
+final fABRoute = RouteItem(
+  (ctx) => FABScreen(),
+  FABScreen.routeName,
+  FABScreen.title,
+);
 
 class FABScreen extends StatefulWidget {
   static const String routeName = 'fab';

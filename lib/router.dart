@@ -48,161 +48,37 @@ class RouteItem {
 }
 
 final routes = [
-  RouteItem(
-    (ctx) => SafeAreaScreen(),
-    SafeAreaScreen.routeName,
-    'Safe Area',
-  ),
-  RouteItem(
-    (ctx) => ExpandedScreen(),
-    ExpandedScreen.routeName,
-    'Expanded',
-  ),
-  RouteItem(
-    (ctx) => WrapScreen(),
-    WrapScreen.routeName,
-    'Wrap',
-  ),
-  RouteItem(
-    (ctx) => AnimatedContainerScreen(),
-    AnimatedContainerScreen.routeName,
-    'Animated Container',
-  ),
-  RouteItem(
-    (ctx) => OpacityScreen(),
-    OpacityScreen.routeName,
-    'Opacity',
-  ),
-  RouteItem(
-    (ctx) => FutureBuilderScreen(),
-    FutureBuilderScreen.routeName,
-    'Future Builder',
-  ),
-  RouteItem(
-    (ctx) => FadeTransitionScreen(),
-    FadeTransitionScreen.routeName,
-    FadeTransitionScreen.title,
-  ),
-  RouteItem(
-    (ctx) => FABScreen(),
-    FABScreen.routeName,
-    FABScreen.title,
-  ),
-  RouteItem(
-    (ctx) => PageViewScreen(),
-    PageViewScreen.routeName,
-    PageViewScreen.title,
-  ),
-  RouteItem(
-    (ctx) => TableScreen(),
-    TableScreen.routeName,
-    TableScreen.title,
-  ),
-  RouteItem(
-    (ctx) => SliverAppBarScreen(),
-    SliverAppBarScreen.routeName,
-    SliverAppBarScreen.title,
-  ),
-  RouteItem(
-    (ctx) => SliverListScreen(),
-    SliverListScreen.routeName,
-    SliverListScreen.title,
-  ),
-  RouteItem(
-    (ctx) => FadeInImageScreen(),
-    FadeInImageScreen.routeName,
-    FadeInImageScreen.title,
-  ),
-  RouteItem(
-    (ctx) => StreamBuilderScreen(),
-    StreamBuilderScreen.routeName,
-    StreamBuilderScreen.title,
-  ),
-  RouteItem(
-    (ctx) => ClipRRectScreen(),
-    ClipRRectScreen.routeName,
-    ClipRRectScreen.title,
-  ),
-  RouteItem(
-    (ctx) => HeroScreen(),
-    HeroScreen.routeName,
-    HeroScreen.title,
-  ),
-  RouteItem(
-    (ctx) => CustomPaintScreen(),
-    CustomPaintScreen.routeName,
-    CustomPaintScreen.title,
-  ),
-  RouteItem(
-    (ctx) => TooltipScreen(),
-    TooltipScreen.routeName,
-    TooltipScreen.title,
-  ),
-  RouteItem(
-    (ctx) => FittedBoxScreen(),
-    FittedBoxScreen.routeName,
-    FittedBoxScreen.title,
-  ),
-  RouteItem(
-    (ctx) => LayoutBuilderScreen(),
-    LayoutBuilderScreen.routeName,
-    LayoutBuilderScreen.title,
-  ),
-  RouteItem(
-    (ctx) => AbsorbPointerScreen(),
-    AbsorbPointerScreen.routeName,
-    AbsorbPointerScreen.title,
-  ),
-  RouteItem(
-    (ctx) => TransformScreen(),
-    TransformScreen.routeName,
-    TransformScreen.title,
-  ),
-  RouteItem(
-    (ctx) => BackdropFilterScreen(),
-    BackdropFilterScreen.routeName,
-    BackdropFilterScreen.title,
-  ),
-  RouteItem(
-    (ctx) => AlignScreen(),
-    AlignScreen.routeName,
-    AlignScreen.title,
-  ),
-  RouteItem(
-    (ctx) => PositionedScreen(),
-    PositionedScreen.routeName,
-    PositionedScreen.title,
-  ),
-  RouteItem(
-    (ctx) => AnimatedBuilderScreen(),
-    AnimatedBuilderScreen.routeName,
-    AnimatedBuilderScreen.title,
-  ),
-  RouteItem(
-    (ctx) => DismissibleScreen(),
-    DismissibleScreen.routeName,
-    DismissibleScreen.title,
-  ),
-  RouteItem(
-    (ctx) => SizedBoxScreen(),
-    SizedBoxScreen.routeName,
-    SizedBoxScreen.title,
-  ),
-  RouteItem(
-    (ctx) => DraggableScreen(),
-    DraggableScreen.routeName,
-    DraggableScreen.title,
-  ),
-  RouteItem(
-    (ctx) => AnimatedListScreen(),
-    AnimatedListScreen.routeName,
-    AnimatedListScreen.title,
-  ),
-  RouteItem(
-    (ctx) => FlexibleScreen(),
-    FlexibleScreen.routeName,
-    FlexibleScreen.title,
-  ),
+  safeAreaRoute,
+  expandedRoute,
+  wrapRoute,
+  animatedContainerRoute,
+  opacityRoute,
+  futureBuilderRoute,
+  fadeTransitionRoute,
+  fABRoute,
+  pageViewRoute,
+  tableRoute,
+  sliverAppBarRoute,
+  sliverListRoute,
+  fadeInImageRoute,
+  streamBuilderRoute,
+  clipRRectRoute,
+  heroRoute,
+  customPaintRoute,
+  tooltipRoute,
+  fittedBoxRoute,
+  layoutBuilderRoute,
+  absorbPointerRoute,
+  transformRoute,
+  backdropFilterRoute,
+  alignRoute,
+  positionedRoute,
+  animatedBuilderRoute,
+  dismissibleRoute,
+  sizedBoxRoute,
+  draggableRoute,
+  animatedListRoute,
+  flexibleRoute,
   spacerRoute
 ];
 

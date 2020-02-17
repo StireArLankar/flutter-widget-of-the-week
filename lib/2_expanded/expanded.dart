@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/tabs.dart';
 
-import './first_tab.dart';
-import './second_tab.dart';
+import '../tabs.dart';
+import '../router.dart';
+import 'first_tab.dart';
+import 'second_tab.dart';
+
+final expandedRoute = RouteItem(
+  (ctx) => ExpandedScreen(),
+  ExpandedScreen.routeName,
+  ExpandedScreen.title,
+);
 
 class ExpandedScreen extends StatelessWidget {
   static const String routeName = 'expanded';
+  static const String title = 'Expanded';
 
   @override
   Widget build(BuildContext context) {
     return TabsScreen(
       [FirstTab(), SecondTab()],
       ['In row', 'In column'],
-      'Expanded',
+      ExpandedScreen.title,
     );
   }
 }

@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../tabs.dart';
+import '../router.dart';
 import 'first_tab.dart';
 import 'second_tab.dart';
 import 'third_tab.dart';
+
+final heroRoute = RouteItem(
+  (ctx) => HeroScreen(),
+  HeroScreen.routeName,
+  HeroScreen.title,
+);
 
 class HeroScreen extends StatelessWidget {
   static const String routeName = 'Hero';

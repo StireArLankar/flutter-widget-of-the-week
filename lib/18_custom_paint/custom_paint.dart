@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../tabs.dart';
+import '../router.dart';
 import 'first_tab.dart';
 import 'second_tab.dart';
+
+final customPaintRoute = RouteItem(
+  (ctx) => CustomPaintScreen(),
+  CustomPaintScreen.routeName,
+  CustomPaintScreen.title,
+);
 
 class CustomPaintScreen extends StatelessWidget {
   static const String routeName = 'custom-paint';

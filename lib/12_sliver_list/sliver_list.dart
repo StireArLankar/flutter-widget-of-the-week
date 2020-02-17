@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../tabs.dart';
+import '../router.dart';
 import 'fifth_tab.dart';
 import 'first_tab.dart';
 import 'fourth_tab.dart';
 import 'second_tab.dart';
 import 'third_tab.dart';
+
+final sliverListRoute = RouteItem(
+  (ctx) => SliverListScreen(),
+  SliverListScreen.routeName,
+  SliverListScreen.title,
+);
 
 class SliverListScreen extends StatelessWidget {
   static const String routeName = 'sliver-list';
