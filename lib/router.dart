@@ -25,6 +25,7 @@ import '2_expanded/expanded.dart';
 import '31_draggable/draggable.dart';
 import '32_animated_list/animated_list.dart';
 import '33_flexible/flexible.dart';
+import '35_spacer/spacer.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
@@ -202,6 +203,7 @@ final routes = [
     FlexibleScreen.routeName,
     FlexibleScreen.title,
   ),
+  spacerRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
@@ -214,22 +216,6 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
   }
 
   return MaterialPageRoute(builder: route.screenBuilder);
-  // switch (settings.name) {
-  //   case SafeAreaScreen.routeName:
-  //     return MaterialPageRoute(builder: (_) => SafeAreaScreen());
-  //   case ExpandedScreen.routeName:
-  //     return MaterialPageRoute(builder: (_) => ExpandedScreen());
-  //   case WrapScreen.routeName:
-  //     return MaterialPageRoute(builder: (_) => WrapScreen());
-  //   case AnimatedContainerScreen.routeName:
-  //     return MaterialPageRoute(builder: (_) => AnimatedContainerScreen());
-  //   case OpacityScreen.routeName:
-  //     return MaterialPageRoute(builder: (_) => OpacityScreen());
-  //   case FutureBuilderScreen.routeName:
-  //     return MaterialPageRoute(builder: (_) => FutureBuilderScreen());
-  //   default:
-  //     return MaterialPageRoute(builder: (_) => DefaultScreen(settings.name));
-  // }
 }
 
 class DefaultScreen extends StatelessWidget {
