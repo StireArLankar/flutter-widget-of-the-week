@@ -26,6 +26,7 @@ import '31_draggable/draggable.dart';
 import '32_animated_list/animated_list.dart';
 import '33_flexible/flexible.dart';
 import '35_spacer/spacer.dart';
+import '37_animated_icon/animated_icon.dart';
 import '3_wrap/wrap.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
@@ -79,7 +80,8 @@ final routes = [
   draggableRoute,
   animatedListRoute,
   flexibleRoute,
-  spacerRoute
+  spacerRoute,
+  animatedIconRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
