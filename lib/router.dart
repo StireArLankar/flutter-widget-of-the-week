@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_of_the_week/40_placeholder/placeholder.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -84,6 +85,7 @@ final routes = [
   spacerRoute,
   animatedIconRoute,
   limitedBoxRoute,
+  placeholderRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
