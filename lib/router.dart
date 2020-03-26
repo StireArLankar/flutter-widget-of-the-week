@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_of_the_week/40_placeholder/placeholder.dart';
 import 'package:flutter_widget_of_the_week/41_rich_text/rich_text.dart';
+import 'package:flutter_widget_of_the_week/42_reordable_list_view/reordable_list_view.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -87,7 +88,8 @@ final routes = [
   animatedIconRoute,
   limitedBoxRoute,
   placeholderRoute,
-  richTextRoute
+  richTextRoute,
+  reordableListViewRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
