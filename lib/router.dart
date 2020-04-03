@@ -32,6 +32,7 @@ import '35_spacer/spacer.dart';
 import '37_animated_icon/animated_icon.dart';
 import '39_limited_box/limited_box.dart';
 import '3_wrap/wrap.dart';
+import '43_animated_switcher/animated_switcher.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
@@ -89,7 +90,8 @@ final routes = [
   limitedBoxRoute,
   placeholderRoute,
   richTextRoute,
-  reordableListViewRoute
+  reordableListViewRoute,
+  animatedSwitcherRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
