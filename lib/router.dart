@@ -4,6 +4,7 @@ import 'package:flutter_widget_of_the_week/41_rich_text/rich_text.dart';
 import 'package:flutter_widget_of_the_week/42_reordable_list_view/reordable_list_view.dart';
 import 'package:flutter_widget_of_the_week/44_animated_positioned/animated_positioned.dart';
 import 'package:flutter_widget_of_the_week/46_indexed_stack/indexed_stack.dart';
+import 'package:flutter_widget_of_the_week/47_semantics/semantics.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -97,7 +98,8 @@ final routes = [
   animatedSwitcherRoute,
   animatedPositionedRoute,
   animatedPaddingRoute,
-  indexedStackRoute
+  indexedStackRoute,
+  semanticsRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
