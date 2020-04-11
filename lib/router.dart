@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/40_placeholder/placeholder.dart';
-import 'package:flutter_widget_of_the_week/41_rich_text/rich_text.dart';
-import 'package:flutter_widget_of_the_week/42_reordable_list_view/reordable_list_view.dart';
-import 'package:flutter_widget_of_the_week/44_animated_positioned/animated_positioned.dart';
-import 'package:flutter_widget_of_the_week/46_indexed_stack/indexed_stack.dart';
-import 'package:flutter_widget_of_the_week/47_semantics/semantics.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -35,8 +29,15 @@ import '35_spacer/spacer.dart';
 import '37_animated_icon/animated_icon.dart';
 import '39_limited_box/limited_box.dart';
 import '3_wrap/wrap.dart';
+import '40_placeholder/placeholder.dart';
+import '41_rich_text/rich_text.dart';
+import '42_reordable_list_view/reordable_list_view.dart';
 import '43_animated_switcher/animated_switcher.dart';
+import '44_animated_positioned/animated_positioned.dart';
 import '45_animated_padding/animated_padding.dart';
+import '46_indexed_stack/indexed_stack.dart';
+import '47_semantics/semantics.dart';
+import '48_constrained_box/constrained_box.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
@@ -99,7 +100,8 @@ final routes = [
   animatedPositionedRoute,
   animatedPaddingRoute,
   indexedStackRoute,
-  semanticsRoute
+  semanticsRoute,
+  constrainedBoxRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
