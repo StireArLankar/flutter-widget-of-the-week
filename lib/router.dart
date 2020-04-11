@@ -38,6 +38,7 @@ import '45_animated_padding/animated_padding.dart';
 import '46_indexed_stack/indexed_stack.dart';
 import '47_semantics/semantics.dart';
 import '48_constrained_box/constrained_box.dart';
+import '49_stack/stack.dart';
 import '4_animated_container/animated_container.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
@@ -101,7 +102,8 @@ final routes = [
   animatedPaddingRoute,
   indexedStackRoute,
   semanticsRoute,
-  constrainedBoxRoute
+  constrainedBoxRoute,
+  stackRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
