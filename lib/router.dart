@@ -40,6 +40,7 @@ import '47_semantics/semantics.dart';
 import '48_constrained_box/constrained_box.dart';
 import '49_stack/stack.dart';
 import '4_animated_container/animated_container.dart';
+import '50_animated_opacity/animated_opacity.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
@@ -103,7 +104,8 @@ final routes = [
   indexedStackRoute,
   semanticsRoute,
   constrainedBoxRoute,
-  stackRoute
+  stackRoute,
+  animatedOpacityRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
