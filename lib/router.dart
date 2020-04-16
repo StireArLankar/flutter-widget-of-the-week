@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_of_the_week/51_fractionally_sized_box/fractionally_sized_box.dart';
 import 'package:flutter_widget_of_the_week/52_list_view/list_view.dart';
+import 'package:flutter_widget_of_the_week/53_list_tile/list_tile.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -109,7 +110,8 @@ final routes = [
   stackRoute,
   animatedOpacityRoute,
   fractionallySizedBoxRoute,
-  listViewRoute
+  listViewRoute,
+  listTileRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
