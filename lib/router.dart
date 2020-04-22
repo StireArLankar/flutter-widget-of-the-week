@@ -4,6 +4,7 @@ import 'package:flutter_widget_of_the_week/52_list_view/list_view.dart';
 import 'package:flutter_widget_of_the_week/53_list_tile/list_tile.dart';
 import 'package:flutter_widget_of_the_week/54_container/container.dart';
 import 'package:flutter_widget_of_the_week/55_selectable_text/selectable_text.dart';
+import 'package:flutter_widget_of_the_week/56_data_table/data_table.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -115,7 +116,8 @@ final routes = [
   listViewRoute,
   listTileRoute,
   containerRoute,
-  selectableTextRoute
+  selectableTextRoute,
+  dataTableRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
