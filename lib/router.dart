@@ -6,6 +6,7 @@ import 'package:flutter_widget_of_the_week/54_container/container.dart';
 import 'package:flutter_widget_of_the_week/55_selectable_text/selectable_text.dart';
 import 'package:flutter_widget_of_the_week/56_data_table/data_table.dart';
 import 'package:flutter_widget_of_the_week/57_slider/slider.dart';
+import 'package:flutter_widget_of_the_week/58_alert_dialog/alert_dialog.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -119,7 +120,8 @@ final routes = [
   containerRoute,
   selectableTextRoute,
   dataTableRoute,
-  sliderRoute
+  sliderRoute,
+  alertDialogRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
