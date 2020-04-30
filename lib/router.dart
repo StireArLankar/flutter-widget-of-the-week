@@ -1,12 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/51_fractionally_sized_box/fractionally_sized_box.dart';
-import 'package:flutter_widget_of_the_week/52_list_view/list_view.dart';
-import 'package:flutter_widget_of_the_week/53_list_tile/list_tile.dart';
-import 'package:flutter_widget_of_the_week/54_container/container.dart';
-import 'package:flutter_widget_of_the_week/55_selectable_text/selectable_text.dart';
-import 'package:flutter_widget_of_the_week/56_data_table/data_table.dart';
-import 'package:flutter_widget_of_the_week/57_slider/slider.dart';
-import 'package:flutter_widget_of_the_week/58_alert_dialog/alert_dialog.dart';
 
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
@@ -49,7 +41,16 @@ import '48_constrained_box/constrained_box.dart';
 import '49_stack/stack.dart';
 import '4_animated_container/animated_container.dart';
 import '50_animated_opacity/animated_opacity.dart';
+import '51_fractionally_sized_box/fractionally_sized_box.dart';
+import '52_list_view/list_view.dart';
+import '53_list_tile/list_tile.dart';
+import '54_container/container.dart';
+import '55_selectable_text/selectable_text.dart';
+import '56_data_table/data_table.dart';
+import '57_slider/slider.dart';
+import '58_alert_dialog/alert_dialog.dart';
 import '58_animated_crossfade/animated_crossfade.dart';
+import '59_draggable_scrollable_sheet/draggable_scrollable_sheet.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
@@ -123,7 +124,8 @@ final routes = [
   dataTableRoute,
   sliderRoute,
   alertDialogRoute,
-  animatedCrossfadeRoute
+  animatedCrossfadeRoute,
+  draggableScrollableSheetRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
