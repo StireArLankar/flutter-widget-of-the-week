@@ -49,6 +49,7 @@ import '48_constrained_box/constrained_box.dart';
 import '49_stack/stack.dart';
 import '4_animated_container/animated_container.dart';
 import '50_animated_opacity/animated_opacity.dart';
+import '58_animated_crossfade/animated_crossfade.dart';
 import '5_opacity/opacity.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
@@ -121,7 +122,8 @@ final routes = [
   selectableTextRoute,
   dataTableRoute,
   sliderRoute,
-  alertDialogRoute
+  alertDialogRoute,
+  animatedCrossfadeRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
