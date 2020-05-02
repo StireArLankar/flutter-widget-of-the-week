@@ -53,6 +53,7 @@ import '58_animated_crossfade/animated_crossfade.dart';
 import '59_draggable_scrollable_sheet/draggable_scrollable_sheet.dart';
 import '5_opacity/opacity.dart';
 import '60_color_filtered/color_filtered.dart';
+import '61_toggle_buttons/toggle_buttons.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
@@ -127,7 +128,8 @@ final routes = [
   alertDialogRoute,
   animatedCrossfadeRoute,
   draggableScrollableSheetRoute,
-  colorFilteredRoute
+  colorFilteredRoute,
+  toggleButtonsRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
