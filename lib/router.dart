@@ -57,6 +57,7 @@ import '61_toggle_buttons/toggle_buttons.dart';
 import '62_cupertino_action_sheet/cupertino_action_sheet.dart';
 import '63_tween_animation_builder/tween_animation_builder.dart';
 import '64_image/image.dart';
+import '65_tab_bar/tab_bar.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
@@ -135,7 +136,8 @@ final routes = [
   toggleButtonsRoute,
   cupertinoActionSheetRoute,
   tweenAnimationBuilderRoute,
-  imageRoute
+  imageRoute,
+  tabBarRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
