@@ -59,6 +59,7 @@ import '63_tween_animation_builder/tween_animation_builder.dart';
 import '64_image/image.dart';
 import '65_tab_bar/tab_bar.dart';
 import '66_drawer/drawer.dart';
+import '67_snackbar/snackbar.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
@@ -139,7 +140,8 @@ final routes = [
   tweenAnimationBuilderRoute,
   imageRoute,
   tabBarRoute,
-  drawerRoute
+  drawerRoute,
+  snackbarRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
