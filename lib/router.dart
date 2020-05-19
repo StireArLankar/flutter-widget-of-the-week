@@ -61,6 +61,7 @@ import '65_tab_bar/tab_bar.dart';
 import '66_drawer/drawer.dart';
 import '67_snackbar/snackbar.dart';
 import '68_list_wheel_scroll_view/list_wheel_scroll_view.dart';
+import '69_shader_mask/shader_mask.dart';
 import '6_future_builder/future_builder.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
@@ -143,7 +144,8 @@ final routes = [
   tabBarRoute,
   drawerRoute,
   snackbarRoute,
-  listWheelScrollViewRoute
+  listWheelScrollViewRoute,
+  shaderMaskRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
