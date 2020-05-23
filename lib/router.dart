@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
+import '10_table/table.dart';
 import '11_sliver_app_bar/sliver_app_bar.dart';
 import '12_sliver_list/sliver_list.dart';
 import '13_fade_in_image/fade_in_image.dart';
@@ -63,10 +63,10 @@ import '67_snackbar/snackbar.dart';
 import '68_list_wheel_scroll_view/list_wheel_scroll_view.dart';
 import '69_shader_mask/shader_mask.dart';
 import '6_future_builder/future_builder.dart';
+import '70_path_clipper/path_clipper.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
 import '9_page_view/page_view.dart';
-import '10_table/table.dart';
 
 class RouteItem {
   final Widget Function(BuildContext) screenBuilder;
@@ -145,7 +145,8 @@ final routes = [
   drawerRoute,
   snackbarRoute,
   listWheelScrollViewRoute,
-  shaderMaskRoute
+  shaderMaskRoute,
+  pathClipperRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
