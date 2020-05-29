@@ -64,6 +64,7 @@ import '68_list_wheel_scroll_view/list_wheel_scroll_view.dart';
 import '69_shader_mask/shader_mask.dart';
 import '6_future_builder/future_builder.dart';
 import '70_path_clipper/path_clipper.dart';
+import '71_progress_indicator/progress_indicator.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
 import '9_page_view/page_view.dart';
@@ -146,7 +147,8 @@ final routes = [
   snackbarRoute,
   listWheelScrollViewRoute,
   shaderMaskRoute,
-  pathClipperRoute
+  pathClipperRoute,
+  progressIndicatorRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
