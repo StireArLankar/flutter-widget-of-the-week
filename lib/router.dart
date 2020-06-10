@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_of_the_week/app_drawer.dart';
 
 import '10_table/table.dart';
 import '11_sliver_app_bar/sliver_app_bar.dart';
@@ -66,9 +65,11 @@ import '6_future_builder/future_builder.dart';
 import '70_path_clipper/path_clipper.dart';
 import '71_progress_indicator/progress_indicator.dart';
 import '72_divider/divider.dart';
+import '73_ignore_pointer/igrone_pointer.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
 import '9_page_view/page_view.dart';
+import 'app_drawer.dart';
 
 class RouteItem {
   final Widget Function(BuildContext) screenBuilder;
@@ -150,7 +151,8 @@ final routes = [
   shaderMaskRoute,
   pathClipperRoute,
   progressIndicatorRoute,
-  dividerRoute
+  dividerRoute,
+  ignorePointerRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
