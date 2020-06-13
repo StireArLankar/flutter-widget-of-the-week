@@ -66,6 +66,7 @@ import '70_path_clipper/path_clipper.dart';
 import '71_progress_indicator/progress_indicator.dart';
 import '72_divider/divider.dart';
 import '73_ignore_pointer/igrone_pointer.dart';
+import '74_cupertino_spinner/cupertino_spinner.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
 import '9_page_view/page_view.dart';
@@ -152,7 +153,8 @@ final routes = [
   pathClipperRoute,
   progressIndicatorRoute,
   dividerRoute,
-  ignorePointerRoute
+  ignorePointerRoute,
+  cupertinoSpinnerRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
