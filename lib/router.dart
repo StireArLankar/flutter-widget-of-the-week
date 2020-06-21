@@ -68,6 +68,7 @@ import '72_divider/divider.dart';
 import '73_ignore_pointer/igrone_pointer.dart';
 import '74_cupertino_spinner/cupertino_spinner.dart';
 import '75_clip_oval/clip_oval.dart';
+import '76_padding/padding.dart';
 import '7_fade_transition/fade_transition.dart';
 import '8_fab/fab.dart';
 import '9_page_view/page_view.dart';
@@ -156,7 +157,8 @@ final routes = [
   dividerRoute,
   ignorePointerRoute,
   cupertinoSpinnerRoute,
-  clipOvalRoute
+  clipOvalRoute,
+  paddingRoute
 ];
 
 Route<dynamic> generateRoutes(RouteSettings settings) {
