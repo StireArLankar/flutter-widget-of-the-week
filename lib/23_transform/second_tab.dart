@@ -45,7 +45,7 @@ class _SecondTabState extends State<SecondTab> {
           ),
           Text(
             '$_counter',
-            style: Theme.of(context).textTheme.display1,
+            style: Theme.of(context).textTheme.headline4,
           ),
           FloatingActionButton(
             onPressed: _incrementCounter,

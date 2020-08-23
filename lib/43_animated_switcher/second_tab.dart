@@ -25,7 +25,7 @@ class _SecondTabState extends State<SecondTab> {
             child: Text(
               '$_count',
               key: ValueKey<int>(_count),
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headline4,
             ),
           ),
           RaisedButton(

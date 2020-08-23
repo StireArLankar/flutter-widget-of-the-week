@@ -56,7 +56,7 @@ class _FABScreenState extends State<FABScreen> {
               'BottomBar',
               style: TextStyle(
                 fontSize: 30,
-                color: Theme.of(context).primaryTextTheme.title.color,
+                color: Theme.of(context).primaryTextTheme.headline6.color,
               ),
             ),
           ),

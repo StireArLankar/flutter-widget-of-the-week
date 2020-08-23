@@ -29,7 +29,7 @@ class _SecondTabState extends State<SecondTab> {
 
               return Text(
                 valueAsString,
-                style: Theme.of(context).textTheme.display1,
+                style: Theme.of(context).textTheme.headline4,
               );
             },
           ),
