@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter/physics.dart';
 
 class FirstTab extends StatefulWidget {
@@ -7,12 +6,36 @@ class FirstTab extends StatefulWidget {
   _FirstTabState createState() => _FirstTabState();
 }
 
+class ScrollPositioner {
+  double start = 0.0;
+  double target = 0.0;
+  bool active = false;
+  DateTime dateStart = DateTime.now();
+}
+
 class _FirstTabState extends State<FirstTab> {
-  static const _scrollPhysics = const ExtentScrollPhysics(
-    itemExtent: 80,
-    separatorSpacing: 10,
-    parent: BouncingScrollPhysics(),
-  );
+  ExtentScrollPhysics _scrollPhysics;
+  ScrollController _controller;
+  final ScrollPositioner scrollPositioner = ScrollPositioner();
+
+  @override
+  void initState() {
+    _controller = ScrollController();
+    _scrollPhysics = ExtentScrollPhysics(
+      itemExtent: 80,
+      separatorSpacing: 10,
+      padding: 15,
+      scrollPositioner: scrollPositioner,
+      parent: BouncingScrollPhysics(),
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,18 +62,35 @@ class _FirstTabState extends State<FirstTab> {
           ),
           Container(
             height: 130,
-            child: ListView.separated(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              scrollDirection: Axis.horizontal,
-              itemCount: 15,
-              physics: _scrollPhysics,
-              separatorBuilder: (context, _) => SizedBox(width: _scrollPhysics.dividerSpacing),
-              itemBuilder: (context, index) {
-                return SizedBox(
-                  width: _scrollPhysics.itemExtent, // set height for vertical
-                  child: CardItem(index: index),
-                );
+            color: Colors.amber[100],
+            child: NotificationListener<ScrollNotification>(
+              onNotification: (scrollNotification) {
+                if (scrollNotification is ScrollStartNotification) {
+                  scrollPositioner.start = scrollNotification.metrics.pixels;
+                  scrollPositioner.dateStart = DateTime.now();
+                  scrollPositioner.active = false;
+                }
+                return true;
               },
+              child: ListView.builder(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                scrollDirection: Axis.horizontal,
+                controller: _controller,
+                itemCount: 25,
+                physics: _scrollPhysics,
+                itemExtent: _scrollPhysics.itemExtent + _scrollPhysics.dividerSpacing,
+                // separatorBuilder: (context, _) => SizedBox(width: _scrollPhysics.dividerSpacing),
+                itemBuilder: (context, index) {
+                  return Container(
+                    color: Colors.red[100],
+                    padding: EdgeInsets.symmetric(horizontal: _scrollPhysics.dividerSpacing / 2),
+                    child: SizedBox(
+                      width: _scrollPhysics.itemExtent,
+                      child: CardItem(index: index),
+                    ),
+                  );
+                },
+              ),
             ),
           ),
         ],
@@ -116,10 +156,14 @@ class _CardItemState extends State<CardItem> {
 class ExtentScrollPhysics extends ScrollPhysics {
   final double itemExtent;
   final double dividerSpacing;
+  final double padding;
+  final ScrollPositioner scrollPositioner;
 
   const ExtentScrollPhysics({
     ScrollPhysics parent,
     @required this.itemExtent,
+    @required this.scrollPositioner,
+    @required this.padding,
     double separatorSpacing,
   })  : assert(itemExtent != null && itemExtent > 0),
         dividerSpacing = separatorSpacing ?? 0,
@@ -131,6 +175,8 @@ class ExtentScrollPhysics extends ScrollPhysics {
       parent: buildParent(ancestor),
       itemExtent: itemExtent,
       separatorSpacing: dividerSpacing,
+      padding: padding,
+      scrollPositioner: scrollPositioner,
     );
   }
 
@@ -142,13 +188,10 @@ class ExtentScrollPhysics extends ScrollPhysics {
     return item * (itemExtent + dividerSpacing);
   }
 
+  static const coeff = 0.5;
+
   double _getTargetPixels(ScrollPosition position, Tolerance tolerance, double velocity) {
     double page = _getItem(position);
-    double coeff = 0.5;
-
-    if (velocity.abs() > 2000) {
-      coeff += (position.viewportDimension / 2 / (itemExtent + dividerSpacing)).ceil();
-    }
 
     if (velocity < -tolerance.velocity) {
       page -= coeff;
@@ -156,7 +199,9 @@ class ExtentScrollPhysics extends ScrollPhysics {
       page += coeff;
     }
 
-    return _getPixels(position, page.roundToDouble()).clamp(0.0, position.maxScrollExtent);
+    final target = _getPixels(position, page.roundToDouble());
+
+    return target.clamp(position.minScrollExtent, position.maxScrollExtent);
   }
 
   @override
@@ -165,10 +210,54 @@ class ExtentScrollPhysics extends ScrollPhysics {
     // ballistics, which should put us back in range at a page boundary.
     if ((velocity <= 0.0 && position.pixels <= position.minScrollExtent) ||
         (velocity >= 0.0 && position.pixels >= position.maxScrollExtent)) {
+      scrollPositioner.active = false;
       return super.createBallisticSimulation(position, velocity);
     }
 
     final Tolerance tolerance = this.tolerance;
+
+    if (scrollPositioner.active && scrollPositioner.target != position.pixels) {
+      // if ((scrollPositioner.target - position.pixels).abs() < 1) {
+      //   print('infin');
+      //   return null;
+      // }
+
+      return ScrollSpringSimulation(
+        spring,
+        position.pixels,
+        scrollPositioner.target,
+        velocity,
+        tolerance: tolerance,
+      );
+    }
+
+    final timediff = scrollPositioner.dateStart.difference(DateTime.now());
+    final isSwipe = timediff.inMilliseconds < 300;
+
+    if (velocity.abs() > 1500 && isSwipe) {
+      final size = itemExtent + dividerSpacing;
+
+      final count = ((position.viewportDimension - padding * 2) / size).floor();
+      final dir = velocity.sign;
+      final start = (scrollPositioner.start / size).ceil() * size;
+      final offset = start + dir * count * size;
+      final target =
+          offset.clamp(position.minScrollExtent, position.maxScrollExtent).floorToDouble();
+      print('Computed target: $target --- start: $start ---- offset: $offset');
+      print('maxScrollExtent: ${position.maxScrollExtent}');
+      print('viewportDimension: ${position.viewportDimension}');
+      scrollPositioner.target = target;
+      scrollPositioner.active = true;
+
+      return ScrollSpringSimulation(
+        spring,
+        position.pixels,
+        target,
+        velocity,
+        tolerance: tolerance,
+      );
+    }
+
     final double target = _getTargetPixels(position, tolerance, velocity);
 
     if (target != position.pixels) {
@@ -180,6 +269,8 @@ class ExtentScrollPhysics extends ScrollPhysics {
         tolerance: tolerance,
       );
     }
+
+    scrollPositioner.active = false;
 
     return null;
   }
